@@ -1,0 +1,10 @@
+{
+  "monadTestnet": {
+    "SwitchBoardTest": {
+      "address": "0x075219E95666366499b66fBEeEd8e19B8F262272",
+      "switchboardAddress": "0xD3860E2C66cBd5c969Fa7343e6912Eff0416bA33",
+      "deployedAt": "2025-11-12T06:47:10.327Z",
+      "chainId": "10143"
+    }
+  }
+}

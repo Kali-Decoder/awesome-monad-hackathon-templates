@@ -1,0 +1,16 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "@pythnetwork/pyth-sdk-solidity": "^4.0.0",
+    "@redstone-finance/evm-connector": "^0.8.0",
+    "@storknetwork/stork_chainlink_adapter": "^1.0.4",
+    "@storknetwork/stork_pyth_adapter": "^1.0.0",
+    "@switchboard-xyz/on-demand": "^2.4.0",
+    "@switchboard-xyz/on-demand-solidity": "^0.0.4",
+    "dotenv": "^16.4.7"
+  }
+}
