@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Archivo+Black&family=Badeen+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Science+Gothic:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === SHADCN/NEOBRUTALISM BASE === */
+    --background: 50 100% 97%;
+    --foreground: 0 0% 0%;
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 50 100% 97%;
+    --popover-foreground: 0 0% 0%;
+    --secondary-background: 30 100% 97%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 220 10% 40%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 30 50% 90%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 10% 20%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 0%;
+    --radius: 6px;
+    
+    /* === PRIMARY ACCENT (Somnia palette) === */
+    --main: 194 100% 61%;
+    --main-foreground: 0 0% 0%;
+    
+    /* === GAME DESIGN SYSTEM === */
+    --color-bg-dark: #04050b;
+    --color-bg-card: #0b1020;
+    --color-bg-elevated: #11172c;
+    --color-border-subtle: #2a3352;
+
+    /* Somnia gradient palette */
+    --color-primary: #4ad6ff;
+    --color-primary-hover: #6de2ff;
+    --color-primary-dark: #2f93ff;
+    --color-purple: #6f3cff;
+    --color-purple-dark: #5521e0;
+    --color-purple-light: #9358ff;
+    --color-pink: #ff1f9f;
+    --color-pink-dark: #d90f87;
+    
+    /* Semantic Colors */
+    --color-success: #22C55E;
+    --color-danger: #EF4444;
+    --color-warning: #F97316;
+    
+    /* Legacy (keeping for compatibility) */
+    --color-lime: #4ad6ff;
+    --color-yellow: #FACC15;
+    
+    /* Text */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #71717A;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(74, 214, 255, 0.16), transparent 35%),
+      radial-gradient(circle at 85% 20%, rgba(111, 60, 255, 0.14), transparent 40%),
+      radial-gradient(circle at 75% 85%, rgba(255, 31, 159, 0.14), transparent 45%),
+      var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-feature-settings: "ss01", "ss02", "cv01";
+    @apply antialiased;
+  }
+
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(74, 214, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(111, 60, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .game-card {
+    @apply border-2 rounded-xl;
+    background-color: var(--color-bg-card);
+    border-color: var(--color-primary);
+  }
+
+  .game-input {
+    @apply w-full px-4 py-2.5 text-sm font-medium rounded-md outline-none transition-colors;
+    background-color: var(--color-bg-elevated);
+    border: 2px solid var(--color-border-subtle);
+    color: white;
+  }
+
+  .game-input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .game-input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .btn-game {
+    @apply px-4 py-2.5 font-semibold rounded-md transition-all;
+    @apply border-2 border-black shadow-brutal;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none;
+  }
+}
+
+@layer utilities {
+  .text-success { color: var(--color-success); }
+  .text-danger { color: var(--color-danger); }
+  .text-muted { color: var(--color-text-muted); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-primary-accent { color: var(--color-primary); }
+  .bg-game-card { background-color: var(--color-bg-card); }
+  .bg-game-elevated { background-color: var(--color-bg-elevated); }
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-lime { background-color: var(--color-primary); }
+  .border-purple { border-color: var(--color-purple); }
+  .border-subtle { border-color: var(--color-border-subtle); }
+  .border-primary { border-color: var(--color-primary); }
+}
