@@ -1,0 +1,10 @@
+{
+  "contract": "StakingRewards",
+  "address": "0x05e5Fd41B82A368f5E3c158200996a9E42deF869",
+  "stakingToken": "0x534b2f3A21130d7a60830c2Df862319e593943A3",
+  "rewardToken": "0x40D419F6aE98cF4726825f59718dc2cDB4F43bf5",
+  "network": "monadTestnet",
+  "chainId": 10143,
+  "deployer": "0xdAF0182De86F904918Db8d07c7340A1EfcDF8244",
+  "deployedAt": "2026-02-22T08:13:48.550Z"
+}

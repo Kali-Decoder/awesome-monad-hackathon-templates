@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" fill="none">
+  <path
+    d="M38 66L58 18L122 22L153 8L220 22L274 14L334 26L395 18L450 26L506 16L562 24L619 18L688 30L676 62L690 97L655 124L676 154L610 173L632 210L575 226L586 261L523 254L484 274L424 262L370 272L314 260L250 270L208 248L148 260L104 240L54 246L66 206L24 186L38 145L14 117L38 66Z"
+    fill="#FFFFFF"
+    stroke="#0D7A46"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+  <text
+    x="360"
+    y="125"
+    text-anchor="middle"
+    font-size="92"
+    font-family="Arial Black, Arial, sans-serif"
+    fill="#FFFFFF"
+    stroke="#E11D2E"
+    stroke-width="10"
+    paint-order="stroke fill"
+  >
+    SCRATCH
+  </text>
+  <text
+    x="360"
+    y="232"
+    text-anchor="middle"
+    font-size="95"
+    font-family="Arial Black, Arial, sans-serif"
+    fill="#FFFFFF"
+    stroke="#E11D2E"
+    stroke-width="10"
+    paint-order="stroke fill"
+  >
+    &amp; WIN!
+  </text>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "contract": "RewardToken",
+  "rewardToken": "0x40D419F6aE98cF4726825f59718dc2cDB4F43bf5",
+  "network": "monadTestnet",
+  "chainId": 10143,
+  "deployer": "0xdAF0182De86F904918Db8d07c7340A1EfcDF8244",
+  "deployedAt": "2026-02-22T08:13:03.436Z"
+}
