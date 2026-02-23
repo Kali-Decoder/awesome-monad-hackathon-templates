@@ -11,6 +11,11 @@ A collection of production-ready templates for building on the Monad blockchain.
   - [Oracle Integration](#4-oracle-integration-hardhat)
   - [Token Tracker (Envio)](#5-token-tracker-envio-indexer)
   - [Farcaster Push Notifications](#6-farcaster-push-notifications)
+  - [Embedded Wallet (Privy)](#7-embedded-wallet-privy)
+  - [Smart Wallet (Privy)](#8-smart-wallet-privy)
+  - [Thirdweb Wallet Connection](#9-thirdweb-wallet-connection)
+  - [Staking dApp](#10-staking-dapp)
+  - [Pyth VRF](#11-pyth-vrf)
 - [Getting Started](#-getting-started)
 - [Contributing](#-contributing)
 
@@ -168,6 +173,114 @@ A production-ready Next.js template for building Farcaster Mini Apps with integr
 
 ---
 
+### 7. Embedded Wallet (Privy)
+
+**Template Name:** `Monad Embeded Wallet Template`
+
+**Introduction:**
+A clean starter template for Monad Testnet apps with Privy authentication, embedded wallet UX, and smart-contract interactions.
+
+**Key Features:**
+- 🔐 Privy authentication with embedded EVM wallet
+- 🌐 Monad Testnet chain configuration via Wagmi + Viem
+- 💸 Deposit and withdraw wallet modals
+- 🧮 Counter contract integration (`getMyCount`, `totalCount`, `increaseCounter`)
+- 📱 Responsive Next.js App Router UI
+
+**Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS, Wagmi, Viem, Privy
+
+**Template URL:** [`Monad Embeded Wallet Template/`](./Monad%20Embeded%20Wallet%20Template/)
+
+**Documentation:** [Full README](./Monad%20Embeded%20Wallet%20Template/README.md)
+
+---
+
+### 8. Smart Wallet (Privy)
+
+**Template Name:** `Smart-Wallet-Privy-Template`
+
+**Introduction:**
+A production-ready Next.js template for Privy smart wallets on Monad Testnet, focused on smooth onboarding and secure auth flows.
+
+**Key Features:**
+- 🤖 Automatic smart wallet creation via Privy
+- 💼 Embedded wallet UX (no extension required)
+- 🔄 Batch transaction examples
+- 🔒 Server-side token verification
+- 🌐 Monad Testnet preconfigured
+
+**Tech Stack:** Next.js, TypeScript, Tailwind CSS, Privy Auth, Viem
+
+**Template URL:** [`Smart-Wallet-Privy-Template/`](./Smart-Wallet-Privy-Template/)
+
+**Documentation:** [Full README](./Smart-Wallet-Privy-Template/README.md)
+
+---
+
+### 9. Thirdweb Wallet Connection
+
+**Template Name:** `Thirdweb Wallet-Template`
+
+**Introduction:**
+A simple Next.js App Router template for adding Thirdweb wallet connection UI with configurable provider and supported wallets.
+
+**Key Features:**
+- 🔌 `ConnectWallet` UI integration
+- 🧰 `ThirdwebProvider` setup for supported wallets
+- 🧱 Next.js App Router structure
+- ⚙️ Env-based Thirdweb client configuration
+
+**Tech Stack:** Next.js 13, React 18, Thirdweb React v4, Ethers v5
+
+**Template URL:** [`Thirdweb Wallet-Template/`](./Thirdweb%20Wallet-Template/)
+
+**Documentation:** [Full README](./Thirdweb%20Wallet-Template/README.md)
+
+---
+
+### 10. Staking dApp
+
+**Template Name:** `Monad-Staking-Template`
+
+**Introduction:**
+A complete starter for building and running a Monad Testnet staking application, including Hardhat contracts and a Next.js frontend.
+
+**Key Features:**
+- 🪙 Staking + reward token contracts
+- 🚀 Deployment scripts for Monad Testnet
+- 🎛️ Reward schedule controls (`setRewardsDuration`, `notifyRewardAmount`)
+- 🖥️ Frontend dashboard for staking interactions
+- 🧪 Testing-ready contract project
+
+**Tech Stack:** Hardhat, Solidity, TypeScript, Next.js, Tailwind CSS
+
+**Template URL:** [`Monad-Staking-Template/`](./Monad-Staking-Template/)
+
+**Documentation:** [Root README](./Monad-Staking-Template/README.md)
+
+---
+
+### 11. Pyth VRF
+
+**Template Name:** `pyth-vrf-template`
+
+**Introduction:**
+A working Monad Testnet template for Pyth Entropy (VRF-style randomness), including deploy and end-to-end randomness test scripts.
+
+**Key Features:**
+- 🎲 `IEntropyConsumer` contract implementation
+- 🚢 Deploy script for Monad Testnet
+- ✅ End-to-end randomness request and callback verification script
+- 🌐 Preconfigured Monad Testnet network setup
+
+**Tech Stack:** Hardhat, Solidity, TypeScript, Pyth Entropy
+
+**Template URL:** [`pyth-vrf-template/`](./pyth-vrf-template/)
+
+**Documentation:** [Full README](./pyth-vrf-template/README.md)
+
+---
+
 ## 🎯 Getting Started
 
 ### Quick Start
@@ -181,7 +294,7 @@ A production-ready Next.js template for building Farcaster Mini Apps with integr
    # Clone the entire repository
    git clone <repository-url>
    cd awesome-monad-hackathon-templates
-   
+
    # Navigate to your chosen template
    cd monad-portfolio-viewer-using-moralis-api
    ```
