@@ -1,0 +1,26 @@
+{
+  "name": "mppx-server",
+  "version": "1.0.0",
+  "description": "mppx server for listening routes through mppx",
+  "license": "ISC",
+  "author": "nikku.dev",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.12",
+    "@monad-crypto/mpp": "^0.0.1",
+    "dotenv": "^17.4.0",
+    "hono": "^4.12.10",
+    "mppx": "^0.5.5",
+    "viem": "^2.47.10"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -37,9 +37,7 @@ contract PythRandomDice is IEntropyConsumer {
     ) internal override {
 
         address player = requestPlayer[sequenceNumber];
-
         uint256 dice = (uint256(randomNumber) % 6) + 1;
-
         emit DiceRolled(player, dice);
     }
 

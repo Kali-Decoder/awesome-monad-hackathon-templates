@@ -1,9 +1,9 @@
 {
   "contract": "PythRandomDice",
-  "address": "0x8eB32E5d1d2298a612b00572f780ED4f94437C4B",
+  "address": "0xC54f3327F65fF1998D9775621386d09cf7a094Ad",
   "entropy": "0x825c0390f379c631f3cf11a82a37d20bddf93c07",
   "network": "monadTestnet",
   "chainId": 10143,
   "deployer": "0xdAF0182De86F904918Db8d07c7340A1EfcDF8244",
-  "deployedAt": "2026-02-19T09:08:13.286Z"
+  "deployedAt": "2026-04-13T07:42:37.849Z"
 }
