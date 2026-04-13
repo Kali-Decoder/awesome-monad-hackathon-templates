@@ -41,8 +41,9 @@ function WalletStatus() {
   const { switchChain, isPending: isSwitchingChain } = useSwitchChain();
   const { data: balance, isLoading: isBalanceLoading } = useBalance({
     address,
+    chainId: MONAD_TESTNET_CHAIN_ID,
     query: {
-      enabled: Boolean(address),
+      enabled: Boolean(address) && isConnected,
     },
   });
 
@@ -68,7 +69,7 @@ function WalletStatus() {
         {isBalanceLoading
           ? "Loading..."
           : balance
-            ? `${Number(balance.formatted).toFixed(4)} ${balance.symbol}`
+            ? `${Number(formatEther(balance.value)).toFixed(4)} ${balance.symbol}`
             : "Unavailable"}
       </div>
       {isWrongNetwork ? (
@@ -173,14 +174,15 @@ function Dice3D() {
     onLogs(logs) {
       if (!isWaitingCallback || !address) return;
       for (const log of logs) {
-        const player = (log.args as { player?: string }).player;
-        const result = (log.args as { result?: bigint }).result;
+        const typedLog = log as { args?: { player?: string; result?: bigint } };
+        const player = typedLog.args?.player;
+        const result = typedLog.args?.result;
         if (
           player &&
           result &&
           player.toLowerCase() === address.toLowerCase() &&
-          result >= 1n &&
-          result <= 6n
+          result >= BigInt(1) &&
+          result <= BigInt(6)
         ) {
           const rolledNumber = Number(result);
           setFace(rolledNumber);
@@ -222,7 +224,7 @@ function Dice3D() {
       switchChain({ chainId: MONAD_TESTNET_CHAIN_ID });
       return;
     }
-    if (!entropyFee || entropyFee <= 0n) {
+    if (!entropyFee || entropyFee <= BigInt(0)) {
       setStatus("Unable to fetch entropy fee");
       return;
     }
@@ -252,6 +254,16 @@ function Dice3D() {
 
   return (
     <div className="flex w-full max-w-7xl flex-1 gap-6 py-6">
+      {isRolling ? (
+        <div className="fixed right-6 top-20 z-20 rounded-xl border border-zinc-200 bg-white/95 px-5 py-3 text-right shadow-lg backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95">
+          <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            Waiting Time
+          </div>
+          <div className="text-4xl font-bold leading-none text-violet-600 dark:text-violet-400">
+            {elapsedSeconds}s
+          </div>
+        </div>
+      ) : null}
       <aside className="hidden w-96 shrink-0 rounded-xl border border-zinc-200 bg-white p-4 text-left dark:border-zinc-800 dark:bg-zinc-950 lg:block">
         <div className="mb-3 text-sm font-semibold">Roll History</div>
         {rollHistory.length === 0 ? (
@@ -364,23 +376,13 @@ export default function Home() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <WalletStatus />
             <div className="self-start sm:self-auto">
-              <ConnectKitButton />
+              <ConnectKitButton showBalance />
             </div>
           </div>
         </div>
       </nav>
 
       <main className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
-        {isRolling ? (
-          <div className="fixed right-6 top-20 z-20 rounded-xl border border-zinc-200 bg-white/95 px-5 py-3 text-right shadow-lg backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95">
-            <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-              Waiting Time
-            </div>
-            <div className="text-4xl font-bold leading-none text-violet-600 dark:text-violet-400">
-              {elapsedSeconds}s
-            </div>
-          </div>
-        ) : null}
         <p className="max-w-lg text-zinc-600 dark:text-zinc-400">
           Roll the 3D dice. Keep your wallet connected on Monad testnet.
         </p>
